@@ -1,0 +1,42 @@
+TASK 1: PROFILE OF THE IMPORTED DATA
+File: data/HIGGS_sample_1pct.csv
+Rows: 110,000 | Columns: 29
+
+Column / type / missing values
+  label                        int64      missing=0
+  lepton_pT                    float64    missing=0
+  lepton_eta                   float64    missing=0
+  lepton_phi                   float64    missing=0
+  missing_energy_magnitude     float64    missing=0
+  missing_energy_phi           float64    missing=0
+  jet1_pt                      float64    missing=0
+  jet1_eta                     float64    missing=0
+  jet1_phi                     float64    missing=0
+  jet1_b_tag                   float64    missing=0
+  jet2_pt                      float64    missing=0
+  jet2_eta                     float64    missing=0
+  jet2_phi                     float64    missing=0
+  jet2_b_tag                   float64    missing=0
+  jet3_pt                      float64    missing=0
+  jet3_eta                     float64    missing=0
+  jet3_phi                     float64    missing=0
+  jet3_b_tag                   float64    missing=0
+  jet4_pt                      float64    missing=0
+  jet4_eta                     float64    missing=0
+  jet4_phi                     float64    missing=0
+  jet4_b_tag                   float64    missing=0
+  m_jj                         float64    missing=0
+  m_jjj                        float64    missing=0
+  m_lv                         float64    missing=0
+  m_jlv                        float64    missing=0
+  m_bb                         float64    missing=0
+  m_wbb                        float64    missing=0
+  m_wwbb                       float64    missing=0
+
+Duplicated rows: 27
+
+TASK 2: CLEANING
+Rows before: 110,000
+After removing duplicates: 109,973 (removed 27)
+After removing missing lepton_pT / m_bb: 109,973 (removed 0)
+New columns: pT_level (Low if lepton_pT < 1.0), pT_bin, m_bb_bin, event_type

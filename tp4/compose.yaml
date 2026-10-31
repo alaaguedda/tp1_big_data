@@ -1,0 +1,8 @@
+services:
+ data-analysis:
+  build: .
+  container_name: tp04-analysis
+  volumes:
+    - ./data:/app/data:ro
+    - ./output:/app/output   # extra line: keeps the results on your computer
+  restart: "no"
